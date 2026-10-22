@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+
+# Tests and tools
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# Data and artefacts. The leading slash anchors each rule to the repository
+# root, so a package directory such as grace/data stays tracked.
+/data/
+/corpus/
+/manifests/
+/runs/
+/checkpoints/
+/results/
+/logs/
+
+*.nii
+*.nii.gz
+*.pt
+*.pth
+*.npy
+*.npz
+
+# Editors and systems
+.vscode/
+.idea/
+.DS_Store

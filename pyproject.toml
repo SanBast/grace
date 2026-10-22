@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grace-med"
+version = "0.1.0"
+description = "Retrieval-augmented refinement of 3D medical segmentation masks"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "RobustML, EURECOM" }]
+keywords = [
+    "medical-imaging",
+    "segmentation",
+    "retrieval-augmented",
+    "mask-refinement",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Topic :: Scientific/Engineering :: Image Processing",
+]
+dependencies = [
+    "torch>=2.1",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "nibabel>=5.0",
+    "monai>=1.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4"]
+
+[project.urls]
+Homepage = "https://github.com/robustml-eurecom/grace"
+Issues = "https://github.com/robustml-eurecom/grace/issues"
+
+[project.scripts]
+grace = "grace.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["grace*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
